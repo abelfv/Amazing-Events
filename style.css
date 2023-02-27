@@ -1,0 +1,223 @@
+.main {
+    display: inline-block;
+    height: 90px;
+    padding: 20px;
+}
+
+header {
+    background: rgb(211, 210, 210);
+}
+
+.navbar-collapse {
+    flex-grow: 0 !important;
+}
+
+li {
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    width: 150px;
+    text-align: center;
+}
+
+.sections {
+    background-color: rgb(228, 229, 230);
+    text-align: center;
+    height: 150px;
+    border: 1px solid;
+}
+
+.sections p {
+    display: inline-block;
+    padding-top: 45px;
+    font-weight: bold;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.sections a {
+    color: black !important;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.left {
+    float: left;
+    margin-left: 20px;
+    font-size: 90px;
+    font-weight: 500;
+}
+
+.right {
+    float: right;
+    margin-right: 20px;
+    font-size: 90px;
+    font-weight: 500;
+}
+
+.check-category {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px 20px 50px;
+}
+
+label {
+    margin-right: 40px;
+}
+
+.cards-main-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    margin: 30px;
+    background-color: rgb(163, 247, 247) !important;
+    border-radius: 20px !important;
+}
+
+.card img {
+    margin-top: 15px;
+}
+
+.carta-body {
+    display: grid;
+    text-align: center;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card .btn {
+    background-color: #e9a5a5;
+    color: #000;
+    font-weight: bold;
+    box-shadow: -20px 5px rgba(0, 0, 0, 0.9);
+}
+
+.card-price {
+    margin-top: 10px;
+}
+
+.btn {
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border: #000 2px solid;
+}
+
+.btn:hover {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    transition: 0.3s;
+}
+
+
+.bi {
+    font-size: 4em;
+    margin: 50px 60px 50px 30px;
+    color: #000;
+}
+
+.footer-main-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(230, 230, 230);
+    border: 1px solid;
+}
+
+.cohort {
+    margin: 32px 50px 0px 0px;
+}
+
+.contact-main-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px 50px 0px;
+}
+
+.contact-input {
+    width: 100%;
+    background-color: #ffd6d6;
+}
+
+
+.contact-p {
+    margin: 0px;
+    font-weight: bold;
+}
+
+.contact-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact-button {
+    background-color: #b3a7f7;
+    border-radius: 15px;
+    padding: 5px 20px 5px 20px;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background: #00dffd;
+    color: #000000;
+    transition: 0.7s;
+}
+
+.column-bg-title {
+    border: #000 1px solid;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #fff;
+    background-color: #000;
+}
+
+.column-bg {
+    border: #000 1px solid;
+}
+
+.details-main-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+    margin: 50px 200px 50px 200px;
+    background-color: #ffd6d6;
+}
+
+.detail-image-container {
+    border: #000 2px dashed;
+    padding: 20px;
+}
+
+.details-text-container {
+    border: #000 2px dashed;
+    padding: 25px;
+    margin-left: 10px;
+}
+
+@media (max-width: 700px) { 
+    .bi {
+        font-size: 2em;
+        margin: 50px 10px 20px 30px;
+        color: #000;
+    }
+
+    .cohort {
+        margin: 10px 50px 0px 0px;
+    }
+ }
