@@ -72,108 +72,60 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="column-bg-title">Events Statistics</div>
-        </div>
+        <div class="pt-4 table-responsive w-75 ms-auto me-auto">
+            <table class="table table-bordered table-stats" id="tabla">
+                <thead>
+                    <tr class="table-title">
+                        <th scope="col" colspan="3" id="th">Events statistics</th>
+                    </tr>
+                    <tr>
+                        <th>Events with the highest percentage of attendance</th>
+                        <th>Events with the lowest percentage of attendance</th>
+                        <th>Events with the larger capacity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="primera-tabla"></td>
+                        <td id="segunda-tabla"></td>
+                        <td id="tercera-tabla"></td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <div class="row">
-            <div class="column-bg col-sm-4">Events wit the highest percentage of audience</div>
-            <div class="column-bg col-sm-4">Events with the lowest percentage of attendance</div>
-            <div class="column-bg col-sm-4">Events with larger capacity</div>
-        </div>
+            <table class="table table-bordered table-stats" id="tabla1">
+                <thead>
+                    <tr class="table-title">
+                        <th scope="col" colspan="3" id="th1">
+                            Upcoming Events statistics by category
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Categories</th>
+                        <th>Revenues</th>
+                        <th>Percentage of attendance</th>
+                    </tr>
+                </thead>
+                <tbody id="upcoming-tabla">
+                </tbody>
+            </table>
 
-        <div class="row">
-            <div class="column-bg col-md-4">1</div>
-            <div class="column-bg col-md-4">2</div>
-            <div class="column-bg col-md-4">3</div>
-        </div>
-
-        <div class="row">
-            <div class="column-bg col-lg-4">4</div>
-            <div class="column-bg col-lg-4">5</div>
-            <div class="column-bg col-lg-4">6</div>
-        </div>
-
-        <div class="row">
-            <div class="column-bg col-xl-4">7</div>
-            <div class="column-bg col-xl-4">8</div>
-            <div class="column-bg col-xl-4">9</div>
-        </div>
-
-        <div class="row">
-            <div class="column-bg-title">Upcoming events statistics by category</div>
-
-        </div>
-
-        <div class="row">
-            <div class="column-bg col-sm-4">Category</div>
-            <div class="column-bg col-sm-4">Revenue</div>
-            <div class="column-bg col-sm-4">Percentage of attendance</div>
-        </div>
-
-        <div class="row">
-            <div class="column-bg col-md-4">1</div>
-            <div class="column-bg col-md-4">2</div>
-            <div class="column-bg col-md-4">3</div>
-        </div>
-
-        <div class="row">
-            <div class="column-bg col-lg-4">4</div>
-            <div class="column-bg col-lg-4">5</div>
-            <div class="column-bg col-lg-4">6</div>
-        </div>
-
-        <div class="row">
-            <div class="column-bg col-xl-4">7</div>
-            <div class="column-bg col-xl-4">8</div>
-            <div class="column-bg col-xl-4">9</div>
-        </div>
-
-        <div class="row">
-            <div class="column-bg col-xl-4">7</div>
-            <div class="column-bg col-xl-4">8</div>
-            <div class="column-bg col-xl-4">9</div>
-        </div>
-
-        <div class="row">
-            <div class="column-bg-title">Past Events statistic by category</div>
-
-        </div>
-
-        <div class="row">
-            <div class="column-bg col-sm-4">Category</div>
-            <div class="column-bg col-sm-4">Revenue</div>
-            <div class="column-bg col-sm-4">Percentage of attendance</div>
-        </div>
-
-        <div class="row">
-            <div class="column-bg col-md-4">1</div>
-            <div class="column-bg col-md-4">2</div>
-            <div class="column-bg col-md-4">3</div>
-        </div>
-
-        <div class="row">
-            <div class="column-bg col-lg-4">4</div>
-            <div class="column-bg col-lg-4">5</div>
-            <div class="column-bg col-lg-4">6</div>
-        </div>
-
-        <div class="row">
-            <div class="column-bg col-xl-4">7</div>
-            <div class="column-bg col-xl-4">8</div>
-            <div class="column-bg col-xl-4">9</div>
-        </div>
-
-        <div class="row">
-            <div class="column-bg col-xl-4">7</div>
-            <div class="column-bg col-xl-4">8</div>
-            <div class="column-bg col-xl-4">9</div>
-        </div>
-
-        <div class="row">
-            <div class="column-bg col-xl-4">7</div>
-            <div class="column-bg col-xl-4">8</div>
-            <div class="column-bg col-xl-4">9</div>
+            <table class="table table-bordered table-stats" id="tabla2">
+                <thead>
+                    <tr class="table-title">
+                        <th scope="col" colspan="3" id="th2">
+                            Past Events statistics by category
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Categories</th>
+                        <th>Revenues</th>
+                        <th>Percentage of attendance</th>
+                    </tr>
+                </thead>
+                <tbody id="past-tabla">
+                </tbody>
+            </table>
         </div>
 
     </main>
@@ -198,6 +150,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <script src="./scripts/stats2.js"></script>
 </body>
 
 </html>

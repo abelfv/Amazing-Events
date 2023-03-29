@@ -1,35 +1,45 @@
 const form = document.querySelector("form");
-const inputT = document.querySelector("#inputT")
+const inputT = document.querySelector("#inputT");
+let checkbox = document.querySelectorAll("input[type='checkbox']");
 
-form.addEventListener("submit", () => {
+form.addEventListener("change", (event) => {
+  event.preventDefault();
   conjuntoFiltro();
 });
 
 checkContainer.addEventListener("change", conjuntoFiltro);
 
 function conjuntoFiltro() {
-  let primerFiltro = filtrarPorTexto(data.events, inputT.value);
-  let segundoFiltro = filtrarPorCategoria(primerFiltro);
-  crearCards(segundoFiltro);
+  checkbox = document.querySelectorAll("input[type='checkbox']");
+  console.log(checkbox);
+  fetch("https://mindhub-xj03.onrender.com/api/amazing")
+    .then((response) => response.json())
+    .then((data) => {
+      const primerFiltro = filtrarPorTexto(data.events, inputT.value);
+      const segundoFiltro = filtrarPorCategoria(primerFiltro);
+      crearCards(segundoFiltro);
+    })
+    .catch((error) => {
+      console.error(error);
+      alert("Error al cargar los eventos. Por favor, inténtalo de nuevo más tarde.");
+    });
 }
 
 function filtrarPorTexto(array, texto) {
-  let arrayFiltrado = array.filter((elemento) =>
+  const arrayFiltrado = array.filter((elemento) =>
     elemento.name.toLowerCase().includes(texto.toLowerCase())
   );
   return arrayFiltrado;
 }
 
 function filtrarPorCategoria(array) {
-  let checkbox = document.querySelectorAll("input[type='checkbox']");
-  let arrayChecks = Array.from(checkbox);
-  let checksareChecked = arrayChecks.filter((check) => check.checked);
-  if (checksareChecked.length == 0) {
+  let checksareChecked = Array.from(checkbox).filter((check) => check.checked);
+  if (checksareChecked.length === 0) {
     return array;
   }
-  let category = checksareChecked.map((check) => check.value);
-  let arrayFiltrado = array.filter((elemento) =>
-    category.includes(elemento.category)
+  const category = checksareChecked.map((check) => check.value.toLowerCase());
+  const arrayFiltrado = array.filter((elemento) =>
+    category.includes(elemento.category.toLowerCase())
   );
   return arrayFiltrado;
 }

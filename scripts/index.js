@@ -1,8 +1,13 @@
 let contenedor = document.getElementById("contenedor");
 
-let datos = data.events;
+let datos
 
-crearCards(datos)
+fetch("https://mindhub-xj03.onrender.com/api/amazing")
+    .then((response) => response.json())
+    .then((data)=> {
+      datos = data.events
+      crearCards(datos)
+    }) 
 
 function crearCards(array){
   if(array.length == 0){
